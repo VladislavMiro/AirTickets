@@ -7,20 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E6EAB2AAAC4B6CC27E114E8 /* Pods_AviaTickets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE45921ED154A2A9D7FBE80 /* Pods_AviaTickets.framework */; };
+		D373D8862C0B3B5F00B498EB /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D373D8852C0B3B5F00B498EB /* R.generated.swift */; };
+		D373D8882C0B3C9A00B498EB /* gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D373D8872C0B3C9A00B498EB /* gitignore */; };
 		D3F6EA6D2C0B377D002883C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6EA6C2C0B377D002883C5 /* AppDelegate.swift */; };
 		D3F6EA6F2C0B377D002883C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6EA6E2C0B377D002883C5 /* SceneDelegate.swift */; };
 		D3F6EA712C0B377D002883C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6EA702C0B377D002883C5 /* ViewController.swift */; };
-		D3F6EA742C0B377D002883C5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D3F6EA732C0B377D002883C5 /* Base */; };
 		D3F6EA762C0B377E002883C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3F6EA752C0B377E002883C5 /* Assets.xcassets */; };
 		D3F6EA792C0B377E002883C5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D3F6EA782C0B377E002883C5 /* Base */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C1282BA9296770813830036 /* Pods-AviaTickets.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AviaTickets.debug.xcconfig"; path = "Target Support Files/Pods-AviaTickets/Pods-AviaTickets.debug.xcconfig"; sourceTree = "<group>"; };
+		7BE45921ED154A2A9D7FBE80 /* Pods_AviaTickets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AviaTickets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B779EEBDF74346FA9FCFA67 /* Pods-AviaTickets.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AviaTickets.release.xcconfig"; path = "Target Support Files/Pods-AviaTickets/Pods-AviaTickets.release.xcconfig"; sourceTree = "<group>"; };
+		D373D8852C0B3B5F00B498EB /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		D373D8872C0B3C9A00B498EB /* gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gitignore; sourceTree = "<group>"; };
 		D3F6EA692C0B377D002883C5 /* AviaTickets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AviaTickets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3F6EA6C2C0B377D002883C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3F6EA6E2C0B377D002883C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D3F6EA702C0B377D002883C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D3F6EA732C0B377D002883C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D3F6EA752C0B377E002883C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3F6EA782C0B377E002883C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3F6EA7A2C0B377E002883C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -31,17 +37,64 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E6EAB2AAAC4B6CC27E114E8 /* Pods_AviaTickets.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03F435CE49A94FD9191342E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7BE45921ED154A2A9D7FBE80 /* Pods_AviaTickets.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D373D8812C0B3B3300B498EB /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		D373D8822C0B3B3A00B498EB /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D373D8832C0B3B4200B498EB /* Models */,
+				D373D8842C0B3B4800B498EB /* Resources */,
+				D3F6EA6C2C0B377D002883C5 /* AppDelegate.swift */,
+				D3F6EA6E2C0B377D002883C5 /* SceneDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		D373D8832C0B3B4200B498EB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D373D8842C0B3B4800B498EB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D373D8852C0B3B5F00B498EB /* R.generated.swift */,
+				D3F6EA752C0B377E002883C5 /* Assets.xcassets */,
+				D3F6EA772C0B377E002883C5 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		D3F6EA602C0B377D002883C5 = {
 			isa = PBXGroup;
 			children = (
+				D373D8872C0B3C9A00B498EB /* gitignore */,
 				D3F6EA6B2C0B377D002883C5 /* AviaTickets */,
 				D3F6EA6A2C0B377D002883C5 /* Products */,
+				F67C626F1EBEFD9A79D0D5EE /* Pods */,
+				03F435CE49A94FD9191342E7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +109,21 @@
 		D3F6EA6B2C0B377D002883C5 /* AviaTickets */ = {
 			isa = PBXGroup;
 			children = (
-				D3F6EA6C2C0B377D002883C5 /* AppDelegate.swift */,
-				D3F6EA6E2C0B377D002883C5 /* SceneDelegate.swift */,
+				D373D8812C0B3B3300B498EB /* Modules */,
+				D373D8822C0B3B3A00B498EB /* Core */,
 				D3F6EA702C0B377D002883C5 /* ViewController.swift */,
-				D3F6EA722C0B377D002883C5 /* Main.storyboard */,
-				D3F6EA752C0B377E002883C5 /* Assets.xcassets */,
-				D3F6EA772C0B377E002883C5 /* LaunchScreen.storyboard */,
 				D3F6EA7A2C0B377E002883C5 /* Info.plist */,
 			);
 			path = AviaTickets;
+			sourceTree = "<group>";
+		};
+		F67C626F1EBEFD9A79D0D5EE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0C1282BA9296770813830036 /* Pods-AviaTickets.debug.xcconfig */,
+				9B779EEBDF74346FA9FCFA67 /* Pods-AviaTickets.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +133,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3F6EA7D2C0B377E002883C5 /* Build configuration list for PBXNativeTarget "AviaTickets" */;
 			buildPhases = (
+				899CA268BC7703DA3D788915 /* [CP] Check Pods Manifest.lock */,
+				D3B960932C0B385800B35FB3 /* R Swift */,
 				D3F6EA652C0B377D002883C5 /* Sources */,
 				D3F6EA662C0B377D002883C5 /* Frameworks */,
 				D3F6EA672C0B377D002883C5 /* Resources */,
+				0C1389835D219C008022DCF6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,12 +188,74 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3F6EA762C0B377E002883C5 /* Assets.xcassets in Resources */,
+				D373D8882C0B3C9A00B498EB /* gitignore in Resources */,
 				D3F6EA792C0B377E002883C5 /* Base in Resources */,
-				D3F6EA742C0B377D002883C5 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C1389835D219C008022DCF6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AviaTickets/Pods-AviaTickets-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AviaTickets/Pods-AviaTickets-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AviaTickets/Pods-AviaTickets-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		899CA268BC7703DA3D788915 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AviaTickets-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3B960932C0B385800B35FB3 /* R Swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "R Swift";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D3F6EA652C0B377D002883C5 /* Sources */ = {
@@ -141,20 +265,13 @@
 				D3F6EA712C0B377D002883C5 /* ViewController.swift in Sources */,
 				D3F6EA6D2C0B377D002883C5 /* AppDelegate.swift in Sources */,
 				D3F6EA6F2C0B377D002883C5 /* SceneDelegate.swift in Sources */,
+				D373D8862C0B3B5F00B498EB /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D3F6EA722C0B377D002883C5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D3F6EA732C0B377D002883C5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D3F6EA772C0B377E002883C5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -203,7 +320,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -218,7 +335,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -266,7 +383,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -275,7 +392,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -287,6 +404,7 @@
 		};
 		D3F6EA7E2C0B377E002883C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C1282BA9296770813830036 /* Pods-AviaTickets.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -297,9 +415,10 @@
 				INFOPLIST_FILE = AviaTickets/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,14 +426,19 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vladislavmiroshnichenko.AviaTickets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		D3F6EA7F2C0B377E002883C5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B779EEBDF74346FA9FCFA67 /* Pods-AviaTickets.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -325,9 +449,10 @@
 				INFOPLIST_FILE = AviaTickets/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,9 +460,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vladislavmiroshnichenko.AviaTickets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
