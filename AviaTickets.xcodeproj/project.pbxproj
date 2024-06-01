@@ -10,9 +10,16 @@
 		4E6EAB2AAAC4B6CC27E114E8 /* Pods_AviaTickets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE45921ED154A2A9D7FBE80 /* Pods_AviaTickets.framework */; };
 		D373D8862C0B3B5F00B498EB /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D373D8852C0B3B5F00B498EB /* R.generated.swift */; };
 		D373D8882C0B3C9A00B498EB /* gitignore in Resources */ = {isa = PBXBuildFile; fileRef = D373D8872C0B3C9A00B498EB /* gitignore */; };
+		D373D8942C0B484D00B498EB /* MainViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D373D8932C0B484D00B498EB /* MainViewBuilder.swift */; };
+		D373D8972C0B486300B498EB /* CoordinatorProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D373D8962C0B486300B498EB /* CoordinatorProtocols.swift */; };
+		D373D8992C0B496300B498EB /* MainViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D373D8982C0B496300B498EB /* MainViewCoordinator.swift */; };
+		D373D89B2C0B49AD00B498EB /* ModuleFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D373D89A2C0B49AD00B498EB /* ModuleFactoryProtocol.swift */; };
+		D373D89D2C0B599C00B498EB /* PlaceHolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D373D89C2C0B599C00B498EB /* PlaceHolderViewController.swift */; };
+		D373D8A02C0B5C9500B498EB /* String + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D373D89F2C0B5C9500B498EB /* String + Extensions.swift */; };
+		D373D8A22C0B6CF000B498EB /* MainViewModuleFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D373D8A12C0B6CF000B498EB /* MainViewModuleFactoryProtocol.swift */; };
 		D3F6EA6D2C0B377D002883C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6EA6C2C0B377D002883C5 /* AppDelegate.swift */; };
 		D3F6EA6F2C0B377D002883C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6EA6E2C0B377D002883C5 /* SceneDelegate.swift */; };
-		D3F6EA712C0B377D002883C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6EA702C0B377D002883C5 /* ViewController.swift */; };
+		D3F6EA712C0B377D002883C5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6EA702C0B377D002883C5 /* MainViewController.swift */; };
 		D3F6EA762C0B377E002883C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3F6EA752C0B377E002883C5 /* Assets.xcassets */; };
 		D3F6EA792C0B377E002883C5 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D3F6EA782C0B377E002883C5 /* Base */; };
 /* End PBXBuildFile section */
@@ -23,10 +30,17 @@
 		9B779EEBDF74346FA9FCFA67 /* Pods-AviaTickets.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AviaTickets.release.xcconfig"; path = "Target Support Files/Pods-AviaTickets/Pods-AviaTickets.release.xcconfig"; sourceTree = "<group>"; };
 		D373D8852C0B3B5F00B498EB /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		D373D8872C0B3C9A00B498EB /* gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gitignore; sourceTree = "<group>"; };
+		D373D8932C0B484D00B498EB /* MainViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewBuilder.swift; sourceTree = "<group>"; };
+		D373D8962C0B486300B498EB /* CoordinatorProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocols.swift; sourceTree = "<group>"; };
+		D373D8982C0B496300B498EB /* MainViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCoordinator.swift; sourceTree = "<group>"; };
+		D373D89A2C0B49AD00B498EB /* ModuleFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleFactoryProtocol.swift; sourceTree = "<group>"; };
+		D373D89C2C0B599C00B498EB /* PlaceHolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderViewController.swift; sourceTree = "<group>"; };
+		D373D89F2C0B5C9500B498EB /* String + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extensions.swift"; sourceTree = "<group>"; };
+		D373D8A12C0B6CF000B498EB /* MainViewModuleFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModuleFactoryProtocol.swift; sourceTree = "<group>"; };
 		D3F6EA692C0B377D002883C5 /* AviaTickets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AviaTickets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3F6EA6C2C0B377D002883C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3F6EA6E2C0B377D002883C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D3F6EA702C0B377D002883C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D3F6EA702C0B377D002883C5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D3F6EA752C0B377E002883C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3F6EA782C0B377E002883C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3F6EA7A2C0B377E002883C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,6 +69,7 @@
 		D373D8812C0B3B3300B498EB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				D373D88B2C0B474400B498EB /* MainView */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -62,6 +77,8 @@
 		D373D8822C0B3B3A00B498EB /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				D373D89E2C0B5C8400B498EB /* Extensions */,
+				D373D8952C0B485700B498EB /* Protocols */,
 				D373D8832C0B3B4200B498EB /* Models */,
 				D373D8842C0B3B4800B498EB /* Resources */,
 				D3F6EA6C2C0B377D002883C5 /* AppDelegate.swift */,
@@ -85,6 +102,59 @@
 				D3F6EA772C0B377E002883C5 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		D373D88B2C0B474400B498EB /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				D373D88C2C0B474900B498EB /* Views */,
+				D373D88E2C0B475700B498EB /* Models */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		D373D88C2C0B474900B498EB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D3F6EA702C0B377D002883C5 /* MainViewController.swift */,
+				D373D89C2C0B599C00B498EB /* PlaceHolderViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D373D88E2C0B475700B498EB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D373D8902C0B476600B498EB /* Protocols */,
+				D373D8932C0B484D00B498EB /* MainViewBuilder.swift */,
+				D373D8982C0B496300B498EB /* MainViewCoordinator.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D373D8902C0B476600B498EB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D373D8A12C0B6CF000B498EB /* MainViewModuleFactoryProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D373D8952C0B485700B498EB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D373D8962C0B486300B498EB /* CoordinatorProtocols.swift */,
+				D373D89A2C0B49AD00B498EB /* ModuleFactoryProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D373D89E2C0B5C8400B498EB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D373D89F2C0B5C9500B498EB /* String + Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		D3F6EA602C0B377D002883C5 = {
@@ -111,7 +181,6 @@
 			children = (
 				D373D8812C0B3B3300B498EB /* Modules */,
 				D373D8822C0B3B3A00B498EB /* Core */,
-				D3F6EA702C0B377D002883C5 /* ViewController.swift */,
 				D3F6EA7A2C0B377E002883C5 /* Info.plist */,
 			);
 			path = AviaTickets;
@@ -171,6 +240,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = D3F6EA602C0B377D002883C5;
 			productRefGroup = D3F6EA6A2C0B377D002883C5 /* Products */;
@@ -262,10 +332,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3F6EA712C0B377D002883C5 /* ViewController.swift in Sources */,
+				D373D8992C0B496300B498EB /* MainViewCoordinator.swift in Sources */,
+				D373D89B2C0B49AD00B498EB /* ModuleFactoryProtocol.swift in Sources */,
+				D3F6EA712C0B377D002883C5 /* MainViewController.swift in Sources */,
 				D3F6EA6D2C0B377D002883C5 /* AppDelegate.swift in Sources */,
+				D373D8A02C0B5C9500B498EB /* String + Extensions.swift in Sources */,
 				D3F6EA6F2C0B377D002883C5 /* SceneDelegate.swift in Sources */,
+				D373D89D2C0B599C00B498EB /* PlaceHolderViewController.swift in Sources */,
 				D373D8862C0B3B5F00B498EB /* R.generated.swift in Sources */,
+				D373D8942C0B484D00B498EB /* MainViewBuilder.swift in Sources */,
+				D373D8A22C0B6CF000B498EB /* MainViewModuleFactoryProtocol.swift in Sources */,
+				D373D8972C0B486300B498EB /* CoordinatorProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +490,8 @@
 				DEVELOPMENT_TEAM = V9P9K4WJ2E;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AviaTickets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AirTickets;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -447,6 +526,8 @@
 				DEVELOPMENT_TEAM = V9P9K4WJ2E;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AviaTickets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AirTickets;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.travel";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";

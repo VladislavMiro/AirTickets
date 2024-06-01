@@ -13,13 +13,21 @@ let R = _R(bundle: Bundle(for: BundleFinder.self))
 struct _R {
   let bundle: Foundation.Bundle
   var color: color { .init(bundle: bundle) }
+  var image: image { .init(bundle: bundle) }
   var info: info { .init(bundle: bundle) }
+  var file: file { .init(bundle: bundle) }
   var storyboard: storyboard { .init(bundle: bundle) }
 
   func color(bundle: Foundation.Bundle) -> color {
     .init(bundle: bundle)
   }
+  func image(bundle: Foundation.Bundle) -> image {
+    .init(bundle: bundle)
+  }
   func info(bundle: Foundation.Bundle) -> info {
+    .init(bundle: bundle)
+  }
+  func file(bundle: Foundation.Bundle) -> file {
     .init(bundle: bundle)
   }
   func storyboard(bundle: Foundation.Bundle) -> storyboard {
@@ -33,12 +41,131 @@ struct _R {
     let developmentRegion = "en"
   }
 
-  /// This `_R.color` struct is generated, and contains static references to 1 colors.
+  /// This `_R.color` struct is generated, and contains static references to 16 colors.
   struct color {
     let bundle: Foundation.Bundle
 
     /// Color `AccentColor`.
     var accentColor: RswiftResources.ColorResource { .init(name: "AccentColor", path: [], bundle: bundle) }
+
+    /// Color `backgroundBlackColor`.
+    var backgroundBlackColor: RswiftResources.ColorResource { .init(name: "backgroundBlackColor", path: [], bundle: bundle) }
+
+    /// Color `blueTintColor`.
+    var blueTintColor: RswiftResources.ColorResource { .init(name: "blueTintColor", path: [], bundle: bundle) }
+
+    /// Color `darkBlue`.
+    var darkBlue: RswiftResources.ColorResource { .init(name: "darkBlue", path: [], bundle: bundle) }
+
+    /// Color `darkGreen`.
+    var darkGreen: RswiftResources.ColorResource { .init(name: "darkGreen", path: [], bundle: bundle) }
+
+    /// Color `greenTintColor`.
+    var greenTintColor: RswiftResources.ColorResource { .init(name: "greenTintColor", path: [], bundle: bundle) }
+
+    /// Color `grey1`.
+    var grey1: RswiftResources.ColorResource { .init(name: "grey1", path: [], bundle: bundle) }
+
+    /// Color `grey2`.
+    var grey2: RswiftResources.ColorResource { .init(name: "grey2", path: [], bundle: bundle) }
+
+    /// Color `grey3`.
+    var grey3: RswiftResources.ColorResource { .init(name: "grey3", path: [], bundle: bundle) }
+
+    /// Color `grey4`.
+    var grey4: RswiftResources.ColorResource { .init(name: "grey4", path: [], bundle: bundle) }
+
+    /// Color `grey5`.
+    var grey5: RswiftResources.ColorResource { .init(name: "grey5", path: [], bundle: bundle) }
+
+    /// Color `grey6`.
+    var grey6: RswiftResources.ColorResource { .init(name: "grey6", path: [], bundle: bundle) }
+
+    /// Color `grey7`.
+    var grey7: RswiftResources.ColorResource { .init(name: "grey7", path: [], bundle: bundle) }
+
+    /// Color `orangeTintColor`.
+    var orangeTintColor: RswiftResources.ColorResource { .init(name: "orangeTintColor", path: [], bundle: bundle) }
+
+    /// Color `redTintColor`.
+    var redTintColor: RswiftResources.ColorResource { .init(name: "redTintColor", path: [], bundle: bundle) }
+
+    /// Color `whiteTextColor`.
+    var whiteTextColor: RswiftResources.ColorResource { .init(name: "whiteTextColor", path: [], bundle: bundle) }
+  }
+
+  /// This `_R.image` struct is generated, and contains static references to 23 images.
+  struct image {
+    let bundle: Foundation.Bundle
+
+    /// Image `bed`.
+    var bed: RswiftResources.ImageResource { .init(name: "bed", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `bell`.
+    var bell: RswiftResources.ImageResource { .init(name: "bell", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `calendar`.
+    var calendar: RswiftResources.ImageResource { .init(name: "calendar", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `close`.
+    var close: RswiftResources.ImageResource { .init(name: "close", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `earth`.
+    var earth: RswiftResources.ImageResource { .init(name: "earth", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `fire`.
+    var fire: RswiftResources.ImageResource { .init(name: "fire", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `graph`.
+    var graph: RswiftResources.ImageResource { .init(name: "graph", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `human`.
+    var human: RswiftResources.ImageResource { .init(name: "human", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `includeMark`.
+    var includeMark: RswiftResources.ImageResource { .init(name: "includeMark", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `landmark`.
+    var landmark: RswiftResources.ImageResource { .init(name: "landmark", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `leftArrow`.
+    var leftArrow: RswiftResources.ImageResource { .init(name: "leftArrow", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `notification`.
+    var notification: RswiftResources.ImageResource { .init(name: "notification", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `plane`.
+    var plane: RswiftResources.ImageResource { .init(name: "plane", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `plane2`.
+    var plane2: RswiftResources.ImageResource { .init(name: "plane2", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `plus`.
+    var plus: RswiftResources.ImageResource { .init(name: "plus", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `profile`.
+    var profile: RswiftResources.ImageResource { .init(name: "profile", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `replaceArrows`.
+    var replaceArrows: RswiftResources.ImageResource { .init(name: "replaceArrows", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `rightArrow`.
+    var rightArrow: RswiftResources.ImageResource { .init(name: "rightArrow", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `route`.
+    var route: RswiftResources.ImageResource { .init(name: "route", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `search`.
+    var search: RswiftResources.ImageResource { .init(name: "search", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `settings`.
+    var settings: RswiftResources.ImageResource { .init(name: "settings", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `share`.
+    var share: RswiftResources.ImageResource { .init(name: "share", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `toolTip`.
+    var toolTip: RswiftResources.ImageResource { .init(name: "toolTip", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
   }
 
   /// This `_R.info` struct is generated, and contains static references to 1 properties.
@@ -87,6 +214,14 @@ struct _R {
         }
       }
     }
+  }
+
+  /// This `_R.file` struct is generated, and contains static references to 1 resource files.
+  struct file {
+    let bundle: Foundation.Bundle
+
+    /// Resource file `gitignore`.
+    var gitignore: RswiftResources.FileResource { .init(name: "gitignore", pathExtension: "", bundle: bundle, locale: LocaleReference.none) }
   }
 
   /// This `_R.storyboard` struct is generated, and contains static references to 1 storyboards.
