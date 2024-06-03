@@ -38,7 +38,7 @@ extension AirTicketsViewCoordinator: Coordinator {
 
 extension AirTicketsViewCoordinator: AirTicketsViewCoordinatorProtocol {
     
-    public func showSearchView() {
+    public func showSearchView(data: String) {
         
     }
     

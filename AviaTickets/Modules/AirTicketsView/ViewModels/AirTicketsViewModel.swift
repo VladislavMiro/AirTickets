@@ -12,7 +12,7 @@ final class AirTicketsViewModel {
     
     //MARK: - Public properties
     
-    public var data: String
+    public var departure: String
     private(set) var offers: [Offer]
     
     public var statePublisher: AnyPublisher<AirTicketsViewState, Never> {
@@ -30,7 +30,7 @@ final class AirTicketsViewModel {
         self.networkManager = networkManager
         self.coordinator = coordinator
         
-        data = .empty
+        departure = .empty
         offers = []
         state = PassthroughSubject<AirTicketsViewState, Never>()
         cancelable = []
@@ -60,7 +60,7 @@ extension AirTicketsViewModel: AirTicketsViewModelProtocol {
     public func cachedInputData() {
         let userDefaults = UserDefaults.standard
         
-        userDefaults.setValue(data, forKey: Constants.cacheKey)
+        userDefaults.setValue(departure, forKey: Constants.cacheKey)
     }
     
     public func loadCachedData() {
@@ -69,12 +69,12 @@ extension AirTicketsViewModel: AirTicketsViewModelProtocol {
         guard let cache = userDefaults.string(forKey: Constants.cacheKey)
         else { return }
 
-        data = cache
+        departure = cache
         state.send(.cacheDownloaded(cache))
     }
     
     public func showSearchView() {
-        coordinator.showSearchView()
+        coordinator.showSearchView(data: departure)
     }
     
 }

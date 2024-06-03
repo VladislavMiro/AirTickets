@@ -136,7 +136,7 @@ private extension AirTicketsViewController {
         
         header.departureTextField.textPublisher
             .filter { !$0.isEmpty }
-            .assign(to: \.data, on: viewModel)
+            .assign(to: \.departure, on: viewModel)
             .store(in: &cancelabel)
         
         header.departureTextField.textChangingDidEndPublisher

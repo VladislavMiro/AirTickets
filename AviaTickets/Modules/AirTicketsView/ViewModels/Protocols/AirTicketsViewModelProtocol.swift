@@ -10,7 +10,7 @@ import Combine
 
 protocol AirTicketsViewModelProtocol: AnyObject {
     var statePublisher: AnyPublisher<AirTicketsViewState, Never> { get }
-    var data: String { get set }
+    var departure: String { get set }
     var offers: [Offer] { get }
     
     func fetchData()

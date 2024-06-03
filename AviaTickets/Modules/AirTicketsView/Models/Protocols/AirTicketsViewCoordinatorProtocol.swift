@@ -8,5 +8,5 @@
 import UIKit
 
 protocol AirTicketsViewCoordinatorProtocol: AnyObject {
-    func showSearchView()
+    func showSearchView(data: String)
 }
