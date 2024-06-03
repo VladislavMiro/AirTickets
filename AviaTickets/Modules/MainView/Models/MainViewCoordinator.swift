@@ -45,9 +45,11 @@ private extension MainViewCoordinator {
     func createTabs(tabController: UITabBarController) {
         var tabs: [UIViewController] = []
         
-        let tab1 = PlaceHolderViewController()
+
+        let tab1 = UINavigationController()
+        let airTicketsView = AirTicketsViewCoordinator(navigationCoontroller: tab1)
         
-        tab1.labelText = StringConstants.airTicketsTabTitle
+        airTicketsView.start()
         tab1.tabBarItem = UITabBarItem(title: StringConstants.airTicketsTabTitle,
                                        image: Images.airTicketsTab,
                                        tag: 0)

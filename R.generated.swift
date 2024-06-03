@@ -15,6 +15,7 @@ struct _R {
   var color: color { .init(bundle: bundle) }
   var image: image { .init(bundle: bundle) }
   var info: info { .init(bundle: bundle) }
+  var font: font { .init(bundle: bundle) }
   var file: file { .init(bundle: bundle) }
   var storyboard: storyboard { .init(bundle: bundle) }
 
@@ -27,6 +28,9 @@ struct _R {
   func info(bundle: Foundation.Bundle) -> info {
     .init(bundle: bundle)
   }
+  func font(bundle: Foundation.Bundle) -> font {
+    .init(bundle: bundle)
+  }
   func file(bundle: Foundation.Bundle) -> file {
     .init(bundle: bundle)
   }
@@ -34,11 +38,12 @@ struct _R {
     .init(bundle: bundle)
   }
   func validate() throws {
+    try self.font.validate()
     try self.storyboard.validate()
   }
 
   struct project {
-    let developmentRegion = "en"
+    let developmentRegion = "ru"
   }
 
   /// This `_R.color` struct is generated, and contains static references to 16 colors.
@@ -48,8 +53,8 @@ struct _R {
     /// Color `AccentColor`.
     var accentColor: RswiftResources.ColorResource { .init(name: "AccentColor", path: [], bundle: bundle) }
 
-    /// Color `backgroundBlackColor`.
-    var backgroundBlackColor: RswiftResources.ColorResource { .init(name: "backgroundBlackColor", path: [], bundle: bundle) }
+    /// Color `BackgroundBlackColor`.
+    var backgroundBlackColor: RswiftResources.ColorResource { .init(name: "BackgroundBlackColor", path: [], bundle: bundle) }
 
     /// Color `blueTintColor`.
     var blueTintColor: RswiftResources.ColorResource { .init(name: "blueTintColor", path: [], bundle: bundle) }
@@ -216,9 +221,41 @@ struct _R {
     }
   }
 
-  /// This `_R.file` struct is generated, and contains static references to 1 resource files.
+  /// This `_R.font` struct is generated, and contains static references to 3 fonts.
+  struct font: Sequence {
+    let bundle: Foundation.Bundle
+
+    /// Font `SFProDisplay-Medium`.
+    var sfProDisplayMedium: RswiftResources.FontResource { .init(name: "SFProDisplay-Medium", bundle: bundle, filename: "SF-Pro-Display-Medium.otf") }
+
+    /// Font `SFProDisplay-Regular`.
+    var sfProDisplayRegular: RswiftResources.FontResource { .init(name: "SFProDisplay-Regular", bundle: bundle, filename: "SF-Pro-Display-Regular.otf") }
+
+    /// Font `SFProDisplay-Semibold`.
+    var sfProDisplaySemibold: RswiftResources.FontResource { .init(name: "SFProDisplay-Semibold", bundle: bundle, filename: "SF-Pro-Display-Semibold.otf") }
+
+    func makeIterator() -> IndexingIterator<[RswiftResources.FontResource]> {
+      [sfProDisplayMedium, sfProDisplayRegular, sfProDisplaySemibold].makeIterator()
+    }
+    func validate() throws {
+      for font in self {
+        if !font.canBeLoaded() { throw RswiftResources.ValidationError("[R.swift] Font '\(font.name)' could not be loaded, is '\(font.filename)' added to the UIAppFonts array in this targets Info.plist?") }
+      }
+    }
+  }
+
+  /// This `_R.file` struct is generated, and contains static references to 4 resource files.
   struct file {
     let bundle: Foundation.Bundle
+
+    /// Resource file `SF-Pro-Display-Medium.otf`.
+    var sfProDisplayMediumOtf: RswiftResources.FileResource { .init(name: "SF-Pro-Display-Medium", pathExtension: "otf", bundle: bundle, locale: LocaleReference.none) }
+
+    /// Resource file `SF-Pro-Display-Regular.otf`.
+    var sfProDisplayRegularOtf: RswiftResources.FileResource { .init(name: "SF-Pro-Display-Regular", pathExtension: "otf", bundle: bundle, locale: LocaleReference.none) }
+
+    /// Resource file `SF-Pro-Display-Semibold.otf`.
+    var sfProDisplaySemiboldOtf: RswiftResources.FileResource { .init(name: "SF-Pro-Display-Semibold", pathExtension: "otf", bundle: bundle, locale: LocaleReference.none) }
 
     /// Resource file `gitignore`.
     var gitignore: RswiftResources.FileResource { .init(name: "gitignore", pathExtension: "", bundle: bundle, locale: LocaleReference.none) }
