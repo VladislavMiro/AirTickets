@@ -8,5 +8,18 @@
 import UIKit
 
 protocol Coordinator: AnyObject {
+    var childCoordinators: [Coordinator] { get set }
+    
     func start()
+    
+}
+
+//MARK: - Extension with default methods
+
+extension Coordinator {
+    
+    func finish(coordinator: Coordinator) {
+        childCoordinators.removeAll { $0 === coordinator }
+    }
+    
 }

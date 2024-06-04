@@ -9,6 +9,10 @@ import UIKit
 
 final class AirTicketsViewCoordinator {
     
+    //MARK: - Public properties
+    
+    public var childCoordinators: [Coordinator] = []
+    
     //MARK: - Private properties
     
     private let navigationCoontroller: UINavigationController
@@ -39,7 +43,14 @@ extension AirTicketsViewCoordinator: Coordinator {
 extension AirTicketsViewCoordinator: AirTicketsViewCoordinatorProtocol {
     
     public func showSearchView(data: String) {
+        let coordinator = SearchTicketsViewCoordinator(
+            navigationController: navigationCoontroller,
+            parentCoordinator: self,
+            data: data)
         
+        coordinator.start()
+        
+        childCoordinators.append(coordinator)
     }
     
 }

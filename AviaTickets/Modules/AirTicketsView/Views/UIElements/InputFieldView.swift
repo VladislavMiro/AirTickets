@@ -211,7 +211,7 @@ private extension InputFieldView {
         static let cornerRadius = 16.0
         static let vStackSpacing = 8.0
         static let searchImage = R.image.search()
-        static let imageViewSize = 16
+        static let imageViewSize = 24
         static let separatorHeight = 1.0
         static let layoutOffset = 16.0
         static let shadowOpacity: Float = 0.5

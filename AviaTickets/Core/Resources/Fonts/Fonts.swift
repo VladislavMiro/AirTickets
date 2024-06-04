@@ -13,7 +13,7 @@ struct Fonts {
     static let title3 = R.font.sfProDisplayMedium(size: 16) ?? .systemFont(ofSize: 16, weight: .medium)
     static let title4 = R.font.sfProDisplayRegular(size: 14) ?? .systemFont(ofSize: 16, weight: .regular)
     static let text1 = R.font.sfProDisplayRegular(size: 16) ?? .systemFont(ofSize: 16, weight: .regular)
-    static let text2 = R.font.sfProDisplaySemibold(size: 14) ?? .systemFont(ofSize: 14, weight: .semibold)
-    static let buttonText1 = R.font.sfProDisplayRegular(size: 16) ?? .systemFont(ofSize: 16, weight: .regular)
+    static let text2 = R.font.sfProDisplayRegular(size: 14) ?? .systemFont(ofSize: 14, weight: .regular)
+    static let buttonText1 = R.font.sfProDisplaySemibold(size: 16) ?? .systemFont(ofSize: 16, weight: .semibold)
     static let tabText = R.font.sfProDisplayRegular(size: 10) ?? .systemFont(ofSize: 10, weight: .regular)
 }

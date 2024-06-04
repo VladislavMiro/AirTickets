@@ -42,6 +42,24 @@
 		D373D8E22C0E01ED00B498EB /* AirTicketsMusicSectionViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D373D8E12C0E01ED00B498EB /* AirTicketsMusicSectionViewModelProtocol.swift */; };
 		D373D8E42C0E0DA000B498EB /* AirTicketsViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D373D8E32C0E0DA000B498EB /* AirTicketsViewFactory.swift */; };
 		D373D8E62C0E0F2500B498EB /* AirTicketsViewCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D373D8E52C0E0F2500B498EB /* AirTicketsViewCoordinatorProtocol.swift */; };
+		D373D8EF2C0E3B6600B498EB /* SearchTicketsViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D373D8EE2C0E3B6600B498EB /* SearchTicketsViewCoordinator.swift */; };
+		D373D8F12C0E3B7200B498EB /* SearchTicketsViewCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D373D8F02C0E3B7200B498EB /* SearchTicketsViewCoordinatorProtocol.swift */; };
+		D373D8F32C0E3D2F00B498EB /* SearchTicketsViewModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D373D8F22C0E3D2F00B498EB /* SearchTicketsViewModuleFactory.swift */; };
+		D373D8F52C0E3DEB00B498EB /* SearchTicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D373D8F42C0E3DEB00B498EB /* SearchTicketsViewController.swift */; };
+		D373D8F72C0E3FAD00B498EB /* SearchInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D373D8F62C0E3FAD00B498EB /* SearchInputView.swift */; };
+		D373D8F92C0E464200B498EB /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D373D8F82C0E464200B498EB /* SearchTextField.swift */; };
+		D373D8FB2C0E70F900B498EB /* SearchViewButtonList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D373D8FA2C0E70F900B498EB /* SearchViewButtonList.swift */; };
+		D373D8FD2C0E8F8500B498EB /* SearchViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D373D8FC2C0E8F8500B498EB /* SearchViewButton.swift */; };
+		D373D8FF2C0E8FB200B498EB /* SearchViewButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D373D8FE2C0E8FB200B498EB /* SearchViewButtonType.swift */; };
+		D373D9012C0E96D200B498EB /* SearchViewCityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D373D9002C0E96D200B498EB /* SearchViewCityCell.swift */; };
+		D3BF5F4E2C0EDACD00E7263B /* SearchTicketsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BF5F4D2C0EDACD00E7263B /* SearchTicketsViewModelProtocol.swift */; };
+		D3BF5F502C0EDB4C00E7263B /* SearchTicketsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BF5F4F2C0EDB4C00E7263B /* SearchTicketsViewModel.swift */; };
+		D3BF5F522C0EDC3F00E7263B /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BF5F512C0EDC3F00E7263B /* City.swift */; };
+		D3BF5F542C0EF77900E7263B /* SearchPlaceholderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BF5F532C0EF77900E7263B /* SearchPlaceholderViewController.swift */; };
+		D3BF5F562C0EFAB800E7263B /* SearchPlaceholderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BF5F552C0EFAB800E7263B /* SearchPlaceholderViewModel.swift */; };
+		D3BF5F582C0EFAC700E7263B /* SearchPlaceholderViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BF5F572C0EFAC700E7263B /* SearchPlaceholderViewModelProtocol.swift */; };
+		D3BF5F5A2C0EFB4F00E7263B /* SearchPlaceholderViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BF5F592C0EFB4F00E7263B /* SearchPlaceholderViewCoordinator.swift */; };
+		D3BF5F5C2C0EFCCA00E7263B /* SearchPlaceholderViewCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BF5F5B2C0EFCCA00E7263B /* SearchPlaceholderViewCoordinatorProtocol.swift */; };
 		D3F6EA6D2C0B377D002883C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6EA6C2C0B377D002883C5 /* AppDelegate.swift */; };
 		D3F6EA6F2C0B377D002883C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6EA6E2C0B377D002883C5 /* SceneDelegate.swift */; };
 		D3F6EA712C0B377D002883C5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F6EA702C0B377D002883C5 /* MainViewController.swift */; };
@@ -87,6 +105,24 @@
 		D373D8E12C0E01ED00B498EB /* AirTicketsMusicSectionViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirTicketsMusicSectionViewModelProtocol.swift; sourceTree = "<group>"; };
 		D373D8E32C0E0DA000B498EB /* AirTicketsViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirTicketsViewFactory.swift; sourceTree = "<group>"; };
 		D373D8E52C0E0F2500B498EB /* AirTicketsViewCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirTicketsViewCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		D373D8EE2C0E3B6600B498EB /* SearchTicketsViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTicketsViewCoordinator.swift; sourceTree = "<group>"; };
+		D373D8F02C0E3B7200B498EB /* SearchTicketsViewCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTicketsViewCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		D373D8F22C0E3D2F00B498EB /* SearchTicketsViewModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTicketsViewModuleFactory.swift; sourceTree = "<group>"; };
+		D373D8F42C0E3DEB00B498EB /* SearchTicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTicketsViewController.swift; sourceTree = "<group>"; };
+		D373D8F62C0E3FAD00B498EB /* SearchInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInputView.swift; sourceTree = "<group>"; };
+		D373D8F82C0E464200B498EB /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
+		D373D8FA2C0E70F900B498EB /* SearchViewButtonList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewButtonList.swift; sourceTree = "<group>"; };
+		D373D8FC2C0E8F8500B498EB /* SearchViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewButton.swift; sourceTree = "<group>"; };
+		D373D8FE2C0E8FB200B498EB /* SearchViewButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewButtonType.swift; sourceTree = "<group>"; };
+		D373D9002C0E96D200B498EB /* SearchViewCityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewCityCell.swift; sourceTree = "<group>"; };
+		D3BF5F4D2C0EDACD00E7263B /* SearchTicketsViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTicketsViewModelProtocol.swift; sourceTree = "<group>"; };
+		D3BF5F4F2C0EDB4C00E7263B /* SearchTicketsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTicketsViewModel.swift; sourceTree = "<group>"; };
+		D3BF5F512C0EDC3F00E7263B /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		D3BF5F532C0EF77900E7263B /* SearchPlaceholderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceholderViewController.swift; sourceTree = "<group>"; };
+		D3BF5F552C0EFAB800E7263B /* SearchPlaceholderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceholderViewModel.swift; sourceTree = "<group>"; };
+		D3BF5F572C0EFAC700E7263B /* SearchPlaceholderViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceholderViewModelProtocol.swift; sourceTree = "<group>"; };
+		D3BF5F592C0EFB4F00E7263B /* SearchPlaceholderViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceholderViewCoordinator.swift; sourceTree = "<group>"; };
+		D3BF5F5B2C0EFCCA00E7263B /* SearchPlaceholderViewCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceholderViewCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		D3F6EA692C0B377D002883C5 /* AviaTickets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AviaTickets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3F6EA6C2C0B377D002883C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3F6EA6E2C0B377D002883C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +155,7 @@
 		D373D8812C0B3B3300B498EB /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				D373D8E72C0E19C000B498EB /* SearchTicketsView */,
 				D373D8A52C0B7D7C00B498EB /* AirTicketsView */,
 				D373D88B2C0B474400B498EB /* MainView */,
 			);
@@ -304,6 +341,79 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		D373D8E72C0E19C000B498EB /* SearchTicketsView */ = {
+			isa = PBXGroup;
+			children = (
+				D373D8EC2C0E19DF00B498EB /* Views */,
+				D373D8EA2C0E19D300B498EB /* ViewModels */,
+				D373D8E82C0E19C900B498EB /* Models */,
+			);
+			path = SearchTicketsView;
+			sourceTree = "<group>";
+		};
+		D373D8E82C0E19C900B498EB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D373D8E92C0E19CE00B498EB /* Protocols */,
+				D373D8EE2C0E3B6600B498EB /* SearchTicketsViewCoordinator.swift */,
+				D3BF5F592C0EFB4F00E7263B /* SearchPlaceholderViewCoordinator.swift */,
+				D373D8F22C0E3D2F00B498EB /* SearchTicketsViewModuleFactory.swift */,
+				D373D8FE2C0E8FB200B498EB /* SearchViewButtonType.swift */,
+				D3BF5F512C0EDC3F00E7263B /* City.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D373D8E92C0E19CE00B498EB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D373D8F02C0E3B7200B498EB /* SearchTicketsViewCoordinatorProtocol.swift */,
+				D3BF5F5B2C0EFCCA00E7263B /* SearchPlaceholderViewCoordinatorProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D373D8EA2C0E19D300B498EB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D373D8EB2C0E19D900B498EB /* Protocols */,
+				D3BF5F4F2C0EDB4C00E7263B /* SearchTicketsViewModel.swift */,
+				D3BF5F552C0EFAB800E7263B /* SearchPlaceholderViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D373D8EB2C0E19D900B498EB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D3BF5F4D2C0EDACD00E7263B /* SearchTicketsViewModelProtocol.swift */,
+				D3BF5F572C0EFAC700E7263B /* SearchPlaceholderViewModelProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D373D8EC2C0E19DF00B498EB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D373D8ED2C0E19E300B498EB /* UIelements */,
+				D373D8F42C0E3DEB00B498EB /* SearchTicketsViewController.swift */,
+				D3BF5F532C0EF77900E7263B /* SearchPlaceholderViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D373D8ED2C0E19E300B498EB /* UIelements */ = {
+			isa = PBXGroup;
+			children = (
+				D373D8F62C0E3FAD00B498EB /* SearchInputView.swift */,
+				D373D8F82C0E464200B498EB /* SearchTextField.swift */,
+				D373D8FA2C0E70F900B498EB /* SearchViewButtonList.swift */,
+				D373D8FC2C0E8F8500B498EB /* SearchViewButton.swift */,
+				D373D9002C0E96D200B498EB /* SearchViewCityCell.swift */,
+			);
+			path = UIelements;
+			sourceTree = "<group>";
+		};
 		D3F6EA602C0B377D002883C5 = {
 			isa = PBXGroup;
 			children = (
@@ -482,13 +592,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3BF5F562C0EFAB800E7263B /* SearchPlaceholderViewModel.swift in Sources */,
+				D373D8F12C0E3B7200B498EB /* SearchTicketsViewCoordinatorProtocol.swift in Sources */,
 				D373D8D02C0D373900B498EB /* Offer.swift in Sources */,
 				D373D8CE2C0D30E800B498EB /* NetworkManager.swift in Sources */,
 				D373D8C32C0CED2200B498EB /* AirTicketsMusicSectionCell.swift in Sources */,
+				D3BF5F522C0EDC3F00E7263B /* City.swift in Sources */,
 				D373D8C52C0CF5B100B498EB /* AirTicketsMusicCell.swift in Sources */,
 				D373D8B82C0B81BF00B498EB /* Fonts.swift in Sources */,
+				D3BF5F502C0EDB4C00E7263B /* SearchTicketsViewModel.swift in Sources */,
+				D3BF5F4E2C0EDACD00E7263B /* SearchTicketsViewModelProtocol.swift in Sources */,
 				D373D8992C0B496300B498EB /* MainViewCoordinator.swift in Sources */,
 				D373D89B2C0B49AD00B498EB /* ModuleFactoryProtocol.swift in Sources */,
+				D373D8FF2C0E8FB200B498EB /* SearchViewButtonType.swift in Sources */,
 				D3F6EA712C0B377D002883C5 /* MainViewController.swift in Sources */,
 				D3F6EA6D2C0B377D002883C5 /* AppDelegate.swift in Sources */,
 				D373D8A02C0B5C9500B498EB /* String + Extensions.swift in Sources */,
@@ -497,14 +613,19 @@
 				D373D89D2C0B599C00B498EB /* PlaceHolderViewController.swift in Sources */,
 				D373D8C12C0CEAAE00B498EB /* AirTicketsSectionHeader.swift in Sources */,
 				D373D8E22C0E01ED00B498EB /* AirTicketsMusicSectionViewModelProtocol.swift in Sources */,
+				D373D8EF2C0E3B6600B498EB /* SearchTicketsViewCoordinator.swift in Sources */,
+				D373D8F32C0E3D2F00B498EB /* SearchTicketsViewModuleFactory.swift in Sources */,
 				D373D8BD2C0CAF8000B498EB /* InputFieldView.swift in Sources */,
 				D373D8D82C0DC69B00B498EB /* UITextField + Extensions.swift in Sources */,
 				D373D8862C0B3B5F00B498EB /* R.generated.swift in Sources */,
 				D373D8942C0B484D00B498EB /* MainViewBuilder.swift in Sources */,
 				D373D8D22C0D3C0100B498EB /* AirTicketsMusicSectionViewModel.swift in Sources */,
+				D373D8F72C0E3FAD00B498EB /* SearchInputView.swift in Sources */,
 				D373D8A22C0B6CF000B498EB /* MainViewModuleFactoryProtocol.swift in Sources */,
 				D373D8B02C0B7E7B00B498EB /* AirTicketsViewCoordinator.swift in Sources */,
+				D3BF5F5A2C0EFB4F00E7263B /* SearchPlaceholderViewCoordinator.swift in Sources */,
 				D373D8D42C0D3CD300B498EB /* AirTicketsNetworkResponse.swift in Sources */,
+				D373D8FD2C0E8F8500B498EB /* SearchViewButton.swift in Sources */,
 				D373D8CA2C0D306300B498EB /* NetworkManagerProtocol.swift in Sources */,
 				D373D8E02C0DFE1F00B498EB /* AirTicketsViewModelState.swift in Sources */,
 				D373D8BF2C0CCC6300B498EB /* AirTicketsHeader.swift in Sources */,
@@ -513,8 +634,15 @@
 				D373D8DE2C0DFD4F00B498EB /* AirTicketsViewModelProtocol.swift in Sources */,
 				D373D8E42C0E0DA000B498EB /* AirTicketsViewFactory.swift in Sources */,
 				D373D8AE2C0B7DCB00B498EB /* AirTicketsViewController.swift in Sources */,
+				D3BF5F582C0EFAC700E7263B /* SearchPlaceholderViewModelProtocol.swift in Sources */,
+				D3BF5F5C2C0EFCCA00E7263B /* SearchPlaceholderViewCoordinatorProtocol.swift in Sources */,
+				D3BF5F542C0EF77900E7263B /* SearchPlaceholderViewController.swift in Sources */,
+				D373D8FB2C0E70F900B498EB /* SearchViewButtonList.swift in Sources */,
+				D373D9012C0E96D200B498EB /* SearchViewCityCell.swift in Sources */,
 				D373D8C72C0D012000B498EB /* AirTicketsViewModel.swift in Sources */,
+				D373D8F52C0E3DEB00B498EB /* SearchTicketsViewController.swift in Sources */,
 				D373D8D62C0D40C200B498EB /* AirTicketsMusicOffersOutput.swift in Sources */,
+				D373D8F92C0E464200B498EB /* SearchTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

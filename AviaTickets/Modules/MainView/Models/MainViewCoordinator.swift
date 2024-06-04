@@ -9,6 +9,10 @@ import UIKit
 
 final class MainViewCoordinator {
     
+    //MARK: - Public properties
+    
+    public var childCoordinators: [Coordinator] = []
+    
     //MARK: - Private properties
     
     private let window: UIWindow
@@ -50,9 +54,11 @@ private extension MainViewCoordinator {
         let airTicketsView = AirTicketsViewCoordinator(navigationCoontroller: tab1)
         
         airTicketsView.start()
+        
         tab1.tabBarItem = UITabBarItem(title: StringConstants.airTicketsTabTitle,
                                        image: Images.airTicketsTab,
                                        tag: 0)
+        tab1.tabBarItem.setTitleTextAttributes([ .font : Fonts.tabText ], for: .normal)
         
         tabs.append(tab1)
         
@@ -63,6 +69,7 @@ private extension MainViewCoordinator {
         tab2.tabBarItem = UITabBarItem(title: StringConstants.hotelsTabTitle,
                                        image: Images.hotelsTab,
                                        tag: 1)
+        tab2.tabBarItem.setTitleTextAttributes([ .font : Fonts.tabText ], for: .normal)
         
         tabs.append(tab2)
         
@@ -72,6 +79,7 @@ private extension MainViewCoordinator {
         tab3.tabBarItem = UITabBarItem(title: StringConstants.shorterTabTitle,
                                        image: Images.shorterTab,
                                        tag: 2)
+        tab3.tabBarItem.setTitleTextAttributes([ .font : Fonts.tabText ], for: .normal)
         
         tabs.append(tab3)
         
@@ -81,6 +89,7 @@ private extension MainViewCoordinator {
         tab4.tabBarItem = UITabBarItem(title: StringConstants.subscriptionsTabTitle,
                                        image: Images.subscriptionsTab,
                                        tag: 3)
+        tab4.tabBarItem.setTitleTextAttributes([ .font : Fonts.tabText ], for: .normal)
         
         tabs.append(tab4)
         
@@ -90,6 +99,7 @@ private extension MainViewCoordinator {
         tab5.tabBarItem = UITabBarItem(title: StringConstants.profileTabTitle,
                                        image: Images.profileTab,
                                        tag: 4)
+        tab5.tabBarItem.setTitleTextAttributes([ .font : Fonts.tabText ], for: .normal)
         
         tabs.append(tab5)
         
