@@ -98,6 +98,10 @@ extension SelectedCountryViewModel: SelectedCountryViewModelProtocol {
         arrivalData.send(data)
     }
     
+    public func setDeparture(data: String) {
+        departureData.send(data)
+    }
+    
     public func setDate(type:  SelectedCountryItemType, data: Date) {
         if type == .departureDate && data <= Date.now {
             departureDayData = data
@@ -116,8 +120,11 @@ extension SelectedCountryViewModel: SelectedCountryViewModelProtocol {
         subscribeData.send(data)
     }
     
-    public func showAllTicketsView() {
+    public func showTicketsListView() {
+        let arrival = arrivalData.value
+        let departure = departureData.value
         
+        coordinator.showTicketsListView(departureData: departure, arrivalData: arrival)
     }
     
     public func fetchData() {

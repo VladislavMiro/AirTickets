@@ -22,9 +22,10 @@ protocol SelectedCountryViewModelProtocol: AnyObject {
     func fetchData()
     func replaceData()
     func setArrival(data: String)
-    func setDate(type:  SelectedCountryItemType, data: Date)
+    func setDeparture(data: String)
+    func setDate(type: SelectedCountryItemType, data: Date)
     func subscribeOnThePrice(data: Bool)
-    func showAllTicketsView()
+    func showTicketsListView()
     func popView()
     
 }

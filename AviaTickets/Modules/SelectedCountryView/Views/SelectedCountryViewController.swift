@@ -280,6 +280,11 @@ private extension SelectedCountryViewController {
                 viewModel.setArrival(data: data)
             }.store(in: &cancelable)
         
+        searchView.departureTextField
+            .textPublisher.sink { [unowned self] data in
+                viewModel.setDeparture(data: data)
+            }.store(in: &cancelable)
+        
         viewModel.isUpdateItemsView.sink { [unowned self] _ in
             buttonList.reloadData()
         }.store(in: &cancelable)
@@ -319,7 +324,7 @@ private extension SelectedCountryViewController {
     }
     
     @objc func showAllTicketsButtonTapped() {
-        viewModel.showAllTicketsView()
+        viewModel.showTicketsListView()
     }
     
     @objc func subscribeSwitchChanged(_ sender: UISwitch) {
