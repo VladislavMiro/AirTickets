@@ -13,4 +13,8 @@ extension String {
         return ""
     }
     
+    public static var space: String {
+        return " "
+    }
+    
 }

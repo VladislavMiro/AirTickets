@@ -9,7 +9,7 @@ import UIKit
 
 protocol SearchTicketsViewCoordinatorProtocol: AnyObject {
 
-    func showCountryTicketsView()
+    func showSelectedCountryView(arrivalData: String)
     func showDificultDirrectionView()
     func showWeekendView()
     func showHotTicketsView()

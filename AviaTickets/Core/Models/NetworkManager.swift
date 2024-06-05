@@ -54,3 +54,42 @@ extension NetworkManager: AirTicketsNetworkManagerProtocol {
     
     
 }
+
+extension NetworkManager: SelectedCountryNetworkManagerProtocol {
+    
+    public func fetchTicketOffers() -> Future<SelectedCountryNetworkResponse, any Error> {
+        var urlComponents = URLComponents()
+        var decoder = JSONDecoder()
+        
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        
+        urlComponents.scheme = "https"
+        urlComponents.host = "run.mocky.io"
+        urlComponents.path = "/v3/7e55bf02-89ff-4847-9eb7-7d83ef884017"
+        
+        return Future { [unowned self] promise in
+            
+            guard let url = urlComponents.url else {
+                promise(.failure(URLError(.badURL)))
+                return
+            }
+            
+            self.session.dataTaskPublisher(for: url)
+                .map { $0.data }
+                .decode(type: SelectedCountryNetworkResponse.self, decoder: decoder)
+                .eraseToAnyPublisher()
+                .receive(on: DispatchQueue.main)
+                .sink { completion in
+                    switch completion {
+                    case .finished:
+                        break
+                    case .failure(let error):
+                        promise(.failure(error))
+                    }
+                } receiveValue: { data in
+                    promise(.success(data))
+                }.store(in: &cancelable)
+        }
+    }
+    
+}

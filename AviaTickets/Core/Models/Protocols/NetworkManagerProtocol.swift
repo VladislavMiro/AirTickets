@@ -11,3 +11,7 @@ import Combine
 protocol AirTicketsNetworkManagerProtocol {
     func fetchMusicTravelOffers() -> Future<AirTicketsNetworkResponse, Error>
 }
+
+protocol SelectedCountryNetworkManagerProtocol {
+    func fetchTicketOffers() -> Future<SelectedCountryNetworkResponse, Error>
+}

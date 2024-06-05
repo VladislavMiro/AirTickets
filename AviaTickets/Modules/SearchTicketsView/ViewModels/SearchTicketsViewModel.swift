@@ -65,7 +65,7 @@ extension SearchTicketsViewModel: SearchTicketsViewModelProtocol {
     public func selectRow(at index: Int) {
         let city = cities[index]
         arrivalData.send(city.name)
-        coordinator.showCountryTicketsView()
+        coordinator.showSelectedCountryView(arrivalData: arrivalData.value)
     }
     
     public func didFinish() {

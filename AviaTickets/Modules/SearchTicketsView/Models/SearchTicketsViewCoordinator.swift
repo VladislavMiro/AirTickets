@@ -17,7 +17,7 @@ final class SearchTicketsViewCoordinator {
     
     private let navigationController: UINavigationController
     private weak var parentCoordinator: Coordinator?
-    private let data: String
+    private let departureData: String
     private var currentViewController: UIViewController!
     
     //MARK: - Initialaizers
@@ -27,7 +27,7 @@ final class SearchTicketsViewCoordinator {
                 data: String) {
         self.navigationController = navigationController
         self.parentCoordinator = parentCoordinator
-        self.data = data
+        self.departureData = data
     }
     
 }
@@ -37,7 +37,7 @@ final class SearchTicketsViewCoordinator {
 extension SearchTicketsViewCoordinator: Coordinator {
     
     public func start() {
-        let factory = SearchTicketsViewModuleFactory(coordinator: self, data: data)
+        let factory = SearchTicketsViewModuleFactory(coordinator: self, data: departureData)
         let view = factory.createModule()
         
         view.modalPresentationStyle = .popover
@@ -65,8 +65,17 @@ extension SearchTicketsViewCoordinator: SearchTicketsViewCoordinatorProtocol {
     }
     
     
-    public func showCountryTicketsView() {
+    public func showSelectedCountryView(arrivalData: String) {
+        let coordinator = SelectedCountryViewCoordinator(
+            navigationContorller: navigationController,
+            parentCoordinator: self,
+            departureData: departureData,
+            arrivalData: arrivalData)
         
+        currentViewController.dismiss(animated: true)
+        coordinator.start()
+        
+        childCoordinators.append(coordinator)
     }
     
     public func didFinishView() {
@@ -86,6 +95,7 @@ private extension SearchTicketsViewCoordinator {
         
         currentViewController.dismiss(animated: true)
         coordinator.start()
+        childCoordinators.append(coordinator)
     }
     
 }
