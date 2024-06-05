@@ -99,12 +99,12 @@ extension SelectedCountryViewModel: SelectedCountryViewModelProtocol {
     }
     
     public func setDate(type:  SelectedCountryItemType, data: Date) {
-        if type == .departureDate {
+        if type == .departureDate && data <= Date.now {
             departureDayData = data
             itemData.departureDay = convertDate(date: data)
         }
         
-        if type == .returningDay {
+        if type == .returningDay && data > departureDayData {
             returningDayData = data
             itemData.returningDay = convertDate(date: data)
         }
