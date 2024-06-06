@@ -98,7 +98,9 @@ final class AirTicketsMusicCell: UICollectionViewCell {
 extension AirTicketsMusicCell {
     
     public func setup(data: AirTicketsMusicOffersOutput) {
-        coverView.image = UIImage(named: data.image)
+        let image = "cover" + data.image
+        
+        coverView.image = UIImage(named: image)
         nameLabel.text = data.title
         directionLabel.text = data.town
         priceLabel.text = data.price

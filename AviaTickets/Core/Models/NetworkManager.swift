@@ -63,7 +63,7 @@ extension NetworkManager: SelectedCountryNetworkManagerProtocol {
     
     public func fetchTicketOffers() -> Future<SelectedCountryNetworkResponse, any Error> {
         var urlComponents = URLComponents()
-        var decoder = JSONDecoder()
+        let decoder = JSONDecoder()
         
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         
@@ -104,7 +104,7 @@ extension NetworkManager: TicketsListNetworkManagerProtocol {
     
     public func fetchAllTickets() -> Future<TicketsListNetworkResponse, any Error> {
         var urlComponents = URLComponents()
-        var decoder = JSONDecoder()
+        let decoder = JSONDecoder()
         
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         
