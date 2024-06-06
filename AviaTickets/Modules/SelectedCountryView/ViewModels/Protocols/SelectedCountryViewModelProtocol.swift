@@ -27,5 +27,6 @@ protocol SelectedCountryViewModelProtocol: AnyObject {
     func subscribeOnThePrice(data: Bool)
     func showTicketsListView()
     func popView()
+    func didFinish()
     
 }

@@ -94,7 +94,9 @@ private extension SearchTicketsViewCoordinator {
             parentCoordinator: self)
         
         currentViewController.dismiss(animated: true)
+        
         coordinator.start()
+        
         childCoordinators.append(coordinator)
     }
     

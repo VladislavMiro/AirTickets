@@ -15,6 +15,7 @@ protocol SearchTicketsViewModelProtocol: AnyObject {
     var arrival: AnyPublisher<String, Never> { get } 
     
     func setArrival(data: String)
+    func showSekectedCountryView()
     func buttonTapped(type: SearchViewButtonType)
     func selectRow(at index: Int)
     func didFinish()

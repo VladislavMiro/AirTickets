@@ -65,6 +65,7 @@ final class SelectedCountryViewController: UIViewController {
         let view = TicketOfferListView()
         
         view.tableView.dataSource = self
+        view.tableView.delegate = self
         
         return view
     }()
@@ -127,10 +128,15 @@ final class SelectedCountryViewController: UIViewController {
         super.viewWillAppear(animated)
         viewModel.fetchData()
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        viewModel.didFinish()
+    }
 
 }
 
-//MARK: - Extension with UITableViewDataSource
+//MARK: - Extension with UITableViewDataSource implementation
 
 extension SelectedCountryViewController: UITableViewDataSource {
     
@@ -149,6 +155,16 @@ extension SelectedCountryViewController: UITableViewDataSource {
         cell.setup(image: indexPath.row, data: data)
         
         return cell
+    }
+    
+}
+
+//MARK: - Extension with UITableViewDelegate implementation
+
+extension SelectedCountryViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        ticketsList.tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }

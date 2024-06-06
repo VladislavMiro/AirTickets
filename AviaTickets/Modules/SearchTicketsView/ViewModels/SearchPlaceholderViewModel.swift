@@ -29,4 +29,8 @@ extension SearchPlaceholderViewModel: SearchPlaceholderViewModelProtocol {
         coordinator.popView()
     }
     
+    public func didFinish() {
+        coordinator.didFinish()
+    }
+    
 }

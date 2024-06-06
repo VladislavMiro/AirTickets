@@ -17,5 +17,6 @@ protocol TicketsListViewModelProtocol: AnyObject {
     
     func fetchData()
     func popView()
+    func didFinish()
     
 }

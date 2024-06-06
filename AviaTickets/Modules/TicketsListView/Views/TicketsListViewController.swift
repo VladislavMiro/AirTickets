@@ -28,20 +28,13 @@ final class TicketsListViewController: UIViewController {
     }()
     
     private lazy var collectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
         let refreshControl = UIRefreshControl()
         
         refreshControl.addTarget(self,
                                  action: #selector(refreshData),
                                  for: .valueChanged)
         
-        layout.scrollDirection = .vertical
-        layout.minimumLineSpacing = Constants.itemSpacing
-        layout.minimumInteritemSpacing = Constants.itemSpacing
-        layout.estimatedItemSize = .init(width: Constants.estimatedItemWidth,
-                                         height: Constants.estimatedItemHeight)
-        
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: .init())
         
         collectionView.backgroundColor = .clear
         collectionView.dataSource = self
@@ -50,8 +43,8 @@ final class TicketsListViewController: UIViewController {
                                                    left: .zero,
                                                    bottom: .zero,
                                                    right: .zero)
-        collectionView.register(UICollectionViewCell.self,
-                                forCellWithReuseIdentifier: "Cell")
+        collectionView.register(TicketCell.self,
+                                forCellWithReuseIdentifier: TicketCell.identifire)
         
         return collectionView
     }()
@@ -88,6 +81,11 @@ final class TicketsListViewController: UIViewController {
         super.viewWillAppear(animated)
         viewModel.fetchData()
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        viewModel.didFinish()
+    }
 
 }
 
@@ -102,9 +100,14 @@ extension TicketsListViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
+        guard let cell = collectionView
+            .dequeueReusableCell(withReuseIdentifier: TicketCell.identifire,
+                                 for: indexPath) as? TicketCell
+        else { return .init() }
         
-        cell.backgroundColor = .red
+        let data = viewModel.tickets[indexPath.item]
+        
+        cell.setup(data: data)
         
         return cell
     }
@@ -120,6 +123,8 @@ private extension TicketsListViewController {
         
         navigationView.set(title: viewModel.title,
                            subtitle: viewModel.subtitle)
+        
+        collectionView.collectionViewLayout = createLayout()
         
         view.addSubview(navigationView)
         view.addSubview(collectionView)
@@ -139,10 +144,8 @@ private extension TicketsListViewController {
         
         collectionView.snp.makeConstraints {
             $0.top.equalTo(navigationView.snp.bottom)
-            $0.leading.equalToSuperview()
-                .offset(Constants.layoutOffset)
+            $0.leading.trailing.equalToSuperview()
             $0.trailing.equalToSuperview()
-                .inset(Constants.layoutOffset)
             $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
         }
         
@@ -153,6 +156,32 @@ private extension TicketsListViewController {
         }
         
     }
+    
+    func createLayout() -> UICollectionViewCompositionalLayout {
+            return .init { index, layoutEnviorement in
+                
+                let item = NSCollectionLayoutItem(layoutSize:
+                        .init(widthDimension: .fractionalWidth(Constants.fractionalDimension),
+                              heightDimension: .fractionalHeight(Constants.fractionalDimension)))
+                
+                let group = NSCollectionLayoutGroup
+                    .vertical(layoutSize:
+                            .init(widthDimension: .fractionalWidth(Constants.fractionalDimension),
+                                  heightDimension: .estimated(Constants.estimatedItemHeight)),
+                                subitems: [item])
+                
+                let section = NSCollectionLayoutSection(group: group)
+                
+                section.contentInsets = .init(top: Constants.itemSpacing,
+                                              leading: Constants.itemSpacing,
+                                              bottom: Constants.itemSpacing,
+                                              trailing: Constants.itemSpacing)
+                section.interGroupSpacing = Constants.itemSpacing
+                
+                return section
+                
+            }
+        }
     
     func bind() {
         
@@ -198,8 +227,8 @@ private extension TicketsListViewController {
     enum Constants {
         static let layoutOffset = 16.0
         static let itemSpacing = 16.0
-        static let estimatedItemWidth = 328.0
-        static let estimatedItemHeight = 119.0
+        static let fractionalDimension = 1.0
+        static let estimatedItemHeight = 130.0
         static let contentInsetsTop = 26.0
     }
     

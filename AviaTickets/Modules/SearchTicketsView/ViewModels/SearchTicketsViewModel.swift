@@ -49,6 +49,14 @@ extension SearchTicketsViewModel: SearchTicketsViewModelProtocol {
         arrivalData.send(data)
     }
     
+    public func showSekectedCountryView() {
+        let data = arrivalData.value
+        
+        if !data.isEmpty {
+            coordinator.showSelectedCountryView(arrivalData: data)
+        }
+    }
+    
     public func buttonTapped(type: SearchViewButtonType) {
         switch type {
         case .dificultRoute:
@@ -65,7 +73,6 @@ extension SearchTicketsViewModel: SearchTicketsViewModelProtocol {
     public func selectRow(at index: Int) {
         let city = cities[index]
         arrivalData.send(city.name)
-        coordinator.showSelectedCountryView(arrivalData: arrivalData.value)
     }
     
     public func didFinish() {

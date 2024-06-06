@@ -104,6 +104,13 @@ final class SearchTicketsViewController: UIViewController {
         super.viewDidDisappear(animated)
         viewModel.didFinish()
     }
+    
+    //MARK: - Overrided methods
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
 
 }
 
@@ -136,7 +143,10 @@ extension SearchTicketsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.selectRow(at: indexPath.row)
+        
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        searhInputView.arrivalTextField.becomeFirstResponder()
     }
     
 }
@@ -215,6 +225,13 @@ private extension SearchTicketsViewController {
                 viewModel.setArrival(data: data)
             })
             .store(in: &cancelable)
+        
+        searhInputView.keyboardDoneButtonPublisher
+            .sink { [unowned self] _ in
+                //Если текстовое поле не пустое и нажата кнопка возврата на клавиатуре
+                //переход к пункту 3
+                viewModel.showSekectedCountryView()
+            }.store(in: &cancelable)
         
     }
     

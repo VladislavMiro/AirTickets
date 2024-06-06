@@ -108,7 +108,7 @@ private extension SearchViewButtonList {
 private extension SearchViewButtonList {
     
     enum Colors {
-        static let dificultRouteButton = R.color.darkGreen()
+        static let dificultRouteButton = R.color.greenTintColor()
         static let somewhereButton = R.color.blueTintColor()
         static let weekendButton = R.color.darkBlue()
         static let hotTicketsButton = R.color.redTintColor()

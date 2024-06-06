@@ -6,8 +6,19 @@
 //
 
 import UIKit
+import Combine
 
 final class SearchInputView: UIView {
+    
+    //MARK: - Public properties
+    
+    public var keyboardDoneButtonPublisher : AnyPublisher<Void, Never> {
+        doneButtonPublisher.eraseToAnyPublisher()
+    }
+    
+    //MARK: - Private properties
+    
+    private let doneButtonPublisher : PassthroughSubject<Void, Never>
 
     //MARK: - UI elements
     
@@ -56,14 +67,11 @@ final class SearchInputView: UIView {
     
     //MARK: - Initialaizers
     
-    public init() {
-        super.init(frame: .zero)
-        configuration()
-        layout()
-    }
-    
     override init(frame: CGRect) {
+        doneButtonPublisher = PassthroughSubject<Void, Never>()
+        
         super.init(frame: frame)
+        
         configuration()
         layout()
     }
@@ -90,6 +98,7 @@ extension SearchInputView: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 
         textField.resignFirstResponder()
+        doneButtonPublisher.send()
         
         return true
     }

@@ -21,4 +21,12 @@ extension String {
         return "-"
     }
     
+    public static var dot: String {
+        return "."
+    }
+    
+    public static var slash: String {
+        return "/"
+    }
+    
 }

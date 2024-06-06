@@ -9,4 +9,5 @@ import UIKit
 
 protocol SearchPlaceholderViewCoordinatorProtocol: AnyObject {
     func popView()
+    func didFinish()
 }

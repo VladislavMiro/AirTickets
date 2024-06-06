@@ -63,6 +63,9 @@ extension TicketsListViewCoordinator: TicketsListViewCoordinatorProtocol {
     
     public func popView() {
         navigationController.popViewController(animated: true)
+    }
+    
+    public func didFinish() {
         parentCoordinator?.finish(coordinator: self)
     }
     

@@ -9,4 +9,5 @@ import UIKit
 
 protocol TicketsListViewCoordinatorProtocol: AnyObject {
     func popView()
+    func didFinish()
 }

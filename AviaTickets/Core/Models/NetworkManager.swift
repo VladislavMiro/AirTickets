@@ -18,6 +18,8 @@ final class NetworkManager {
     
 }
 
+//MARK: - Extension with AirTicketsNetworkManagerProtocol implementation
+
 extension NetworkManager: AirTicketsNetworkManagerProtocol {
     
     public func fetchMusicTravelOffers() -> Future<AirTicketsNetworkResponse, Error> {
@@ -54,6 +56,8 @@ extension NetworkManager: AirTicketsNetworkManagerProtocol {
     
     
 }
+
+//MARK: - Extension with SelectedCountryNetworkManagerProtocol implementation
 
 extension NetworkManager: SelectedCountryNetworkManagerProtocol {
     
@@ -93,6 +97,8 @@ extension NetworkManager: SelectedCountryNetworkManagerProtocol {
     }
     
 }
+
+//MARK: - Extension with TicketsListNetworkManagerProtocol implementation
 
 extension NetworkManager: TicketsListNetworkManagerProtocol {
     

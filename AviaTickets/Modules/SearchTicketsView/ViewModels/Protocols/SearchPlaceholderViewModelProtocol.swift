@@ -10,5 +10,6 @@ import Foundation
 protocol SearchPlaceholderViewModelProtocol: AnyObject {
     
     func popView()
+    func didFinish()
     
 }

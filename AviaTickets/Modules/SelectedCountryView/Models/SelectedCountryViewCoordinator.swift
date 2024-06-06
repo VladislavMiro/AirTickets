@@ -55,6 +55,9 @@ extension SelectedCountryViewCoordinator: SelectedCountryViewCoordinatorPorotoco
     
     public func popView() {
         navigationContorller.popViewController(animated: true)
+    }
+    
+    public func didFinish() {
         parentCoordinator?.finish(coordinator: self)
     }
     

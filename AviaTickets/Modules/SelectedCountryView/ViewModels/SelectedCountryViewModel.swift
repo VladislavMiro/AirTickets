@@ -96,6 +96,10 @@ extension SelectedCountryViewModel: SelectedCountryViewModelProtocol {
         coordinator.popView()
     }
     
+    public func didFinish() {
+        coordinator.didFinish()
+    }
+    
     public func setArrival(data: String) {
         arrivalData.send(data)
     }

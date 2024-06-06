@@ -45,8 +45,11 @@ extension SearchPlaceholderViewCoordinator: Coordinator {
 extension SearchPlaceholderViewCoordinator: SearchPlaceholderViewCoordinatorProtocol {
     
     public func popView() {
-        parentCoordinator?.finish(coordinator: self)
         navigationController.popViewController(animated: true)
+    }
+    
+    public func didFinish() {
+        parentCoordinator?.finish(coordinator: self)
     }
     
 }

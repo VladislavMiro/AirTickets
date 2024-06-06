@@ -29,7 +29,7 @@ private extension MainViewController {
         tabBar.isTranslucent = false
         tabBar.tintColor = Colors.selcetedItemColor
         tabBar.unselectedItemTintColor = Colors.unselectedItemColor
-        
+        tabBar.backgroundColor = Colors.background
         let borderSize = CGSize(width: view.bounds.width,
                                 height: Constants.tabBarBorderHeight)
         let borderFrame = CGRect(origin: .zero, size: borderSize)

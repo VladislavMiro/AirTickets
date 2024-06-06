@@ -66,6 +66,10 @@ extension TicketsListViewModel: TicketsListViewModelProtocol {
         coordinator.popView()
     }
     
+    public func didFinish() {
+        coordinator.didFinish()
+    }
+    
     public func fetchData() {
         networkManager.fetchAllTickets()
             .map {  $0.tickets }
@@ -90,11 +94,11 @@ extension TicketsListViewModel: TicketsListViewModelProtocol {
 private extension TicketsListViewModel {
     
     func prepareData() {
-        title = String(format: "%@-%@", departue, arrival)
+        title = String(format: StringConstants.titleFormat, departue, arrival)
         
         let date = formatDate(date: departureDay)
         
-        subtitle = String(format: "%@, %i пассажир", date, numberOfPassangers)
+        subtitle = String(format: StringConstants.subTitleFormat, date, numberOfPassangers)
     }
     
     func formatDate(date: Date) -> String {
@@ -107,21 +111,71 @@ private extension TicketsListViewModel {
     }
     
     func convertTickets(data: Ticket) -> TicketOutput {
-        let luggage = LuggageOutput(hasLuggage: data.luggage.hasLuggage,
-                                    price: data.luggage.price?
-            .value.description ?? .empty)
+        
+        let price = convertCurrency(data: data.price.value)
+        let arrivalTime = convertDate(data: data.arrival.date)
+        let departureTime = convertDate(data: data.departure.date)
+        let spentTime = calculateDate(departure: data.departure.date, arrival: data.arrival.date)
+        
         return TicketOutput(badge: data.badge,
-                            price: data.price.value.description,
-                            providerName: data.providerName,
-                            company: data.company,
-                            departure: data.departure,
-                            arrival: data.arrival,
-                            hasTransfer: data.hasTransfer,
-                            hasVisaTransfer: data.hasVisaTransfer,
-                            luggage: luggage,
-                            handLuggage: data.handLuggage,
-                            isReturnable: data.isReturnable,
-                            isExchangable: data.isExchangable)
+                            price: price,
+                            departureTime: departureTime,
+                            departureAirportCode: data.arrival.airport,
+                            arrivalTime: arrivalTime,
+                            arrivalAirportCode: data.arrival.airport,
+                            spentTime: spentTime,
+                            hasTransfer: data.hasTransfer)
+    }
+    
+    func convertCurrency(data: Int) -> String {
+        let number = NSNumber(integerLiteral: data)
+        let numberFormatter = NumberFormatter()
+        
+        numberFormatter.numberStyle = .currency
+        numberFormatter.maximumFractionDigits = .zero
+        numberFormatter.locale = Locale(identifier: StringConstants.lacaleFormat)
+        numberFormatter.currencyCode = StringConstants.currencyCode
+        
+        return numberFormatter.string(from: number) ?? StringConstants.pricePlaceholder
+    }
+    
+    func convertDate(data:  String) -> String {
+        let dateFormatter = DateFormatter()
+        
+        guard let date = getDate(data: data)
+        else { return StringConstants.timeDatePlaceholder }
+        
+        dateFormatter.locale = Locale(identifier: StringConstants.lacaleFormat)
+        dateFormatter.dateFormat = StringConstants.timeDateFormat
+        
+        return dateFormatter.string(from: date)
+    }
+    
+    func calculateDate(departure: String, arrival: String) -> String {
+        guard let departure = getDate(data: departure),
+              let arrival = getDate(data: arrival)
+        else { return StringConstants.spentTimePlaceholder }
+        
+        let interval = departure.distance(to: arrival)
+        let doubleInterval = Double(interval / 3600)
+        
+        let numberFormatter = NumberFormatter()
+        let number = NSNumber(floatLiteral: doubleInterval)
+        
+        numberFormatter.numberStyle = .decimal
+        numberFormatter.maximumFractionDigits = 1
+        numberFormatter.decimalSeparator = .dot
+        
+        return numberFormatter.string(from: number) ?? StringConstants.spentTimePlaceholder
+    }
+    
+    func getDate(data: String) -> Date? {
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.locale = Locale(identifier: StringConstants.posixLocaleFormat)
+        dateFormatter.dateFormat = StringConstants.posixDateFormat
+        
+        return dateFormatter.date(from: data)
     }
     
 }
@@ -133,6 +187,15 @@ private extension TicketsListViewModel {
     enum StringConstants {
         static let dateFormat = "d MMMM"
         static let lacaleFormat = "ru-Ru"
+        static let posixLocaleFormat = "en_US_POSIX"
+        static let posixDateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        static let currencyCode = "RUB"
+        static let pricePlaceholder = "0 ₽"
+        static let spentTimePlaceholder = "0"
+        static let timeDateFormat = "hh:mm"
+        static let timeDatePlaceholder = "00:00"
+        static let titleFormat = "%@-%@"
+        static let subTitleFormat = "%@, %i пассажир"
     }
     
 }

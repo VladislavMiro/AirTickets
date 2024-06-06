@@ -10,6 +10,7 @@ import Foundation
 protocol SelectedCountryViewCoordinatorPorotocol: AnyObject {
     
     func popView()
+    func didFinish()
     func showTicketsListView(departureData: String, arrivalData: String,
                              departureDay: Date,  numberOfPassangers: Int)
     

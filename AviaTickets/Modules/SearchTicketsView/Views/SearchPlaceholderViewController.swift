@@ -44,6 +44,11 @@ final class SearchPlaceholderViewController: UIViewController {
         configuration()
         layout()
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        viewModel.didFinish()
+    }
 
 }
 
