@@ -16,6 +16,7 @@ final class TicketsListViewModuleFactory {
     private let departureDay: Date
     private let numberOfPassangers: Int
     private let coordinator: TicketsListViewCoordinatorProtocol
+    private let networkManager: TicketsListNetworkManagerProtocol
     
     //MARK: - Initialaizers
     
@@ -27,6 +28,8 @@ final class TicketsListViewModuleFactory {
         self.departureDay = departureDay
         self.numberOfPassangers = numberOfPassangers
         self.coordinator = coordinator
+        
+        networkManager = NetworkManager()
     }
     
 }
@@ -40,7 +43,8 @@ extension TicketsListViewModuleFactory {
                                              arrival: arrivalData,
                                              departureDay: departureDay,
                                              numberOfPassangers: numberOfPassangers,
-                                             coordinator: coordinator)
+                                             coordinator: coordinator,
+                                             networkManager: networkManager)
         let view = TicketsListViewController(viewModel: viewModel)
         
         return view

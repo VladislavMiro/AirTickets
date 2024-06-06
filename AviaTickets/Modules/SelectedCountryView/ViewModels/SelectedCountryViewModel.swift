@@ -49,7 +49,7 @@ final class SelectedCountryViewModel {
     private let networkErrorPublisher: PassthroughSubject<String, Never>
     private let updateItemsView: PassthroughSubject<Void, Never>
     
-    private var ticketsOffersData: [Ticket]
+    private var ticketsOffersData: [TicketOffer]
     private var departureDayData: Date
     private var returningDayData: Date?
     private var numberOfPassangers: Int
@@ -174,7 +174,7 @@ private extension SelectedCountryViewModel {
         return dateFormatter.string(from: date)
     }
     
-    func convertTicketOffers(data: Ticket) -> TicketOffersCellOutput {
+    func convertTicketOffers(data: TicketOffer) -> TicketOffersCellOutput {
         let number = NSNumber(integerLiteral: data.price)
         let numberFormatter = NumberFormatter()
         

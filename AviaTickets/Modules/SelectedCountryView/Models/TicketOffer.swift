@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Ticket: Decodable {
+struct TicketOffer: Decodable {
     let id: Int
     let title: String
     let timeRange: [String]

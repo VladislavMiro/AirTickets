@@ -27,6 +27,35 @@ final class TicketsListViewController: UIViewController {
         return view
     }()
     
+    private lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        let refreshControl = UIRefreshControl()
+        
+        refreshControl.addTarget(self,
+                                 action: #selector(refreshData),
+                                 for: .valueChanged)
+        
+        layout.scrollDirection = .vertical
+        layout.minimumLineSpacing = Constants.itemSpacing
+        layout.minimumInteritemSpacing = Constants.itemSpacing
+        layout.estimatedItemSize = .init(width: Constants.estimatedItemWidth,
+                                         height: Constants.estimatedItemHeight)
+        
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        
+        collectionView.backgroundColor = .clear
+        collectionView.dataSource = self
+        collectionView.refreshControl = refreshControl
+        collectionView.contentInset = UIEdgeInsets(top: Constants.contentInsetsTop,
+                                                   left: .zero,
+                                                   bottom: .zero,
+                                                   right: .zero)
+        collectionView.register(UICollectionViewCell.self,
+                                forCellWithReuseIdentifier: "Cell")
+        
+        return collectionView
+    }()
+    
     //MARK: - Imitialaizers
     
     public init(viewModel: TicketsListViewModelProtocol) {
@@ -51,8 +80,29 @@ final class TicketsListViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        viewModel.fetchData()
     }
 
+}
+
+//MARK: - Extension with UICollectionViewDataSource
+
+extension TicketsListViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel.tickets.count
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
+        
+        cell.backgroundColor = .red
+        
+        return cell
+    }
+    
 }
 
 //MARK: - Extension with private methods
@@ -66,6 +116,7 @@ private extension TicketsListViewController {
                            subtitle: viewModel.subtitle)
         
         view.addSubview(navigationView)
+        view.addSubview(collectionView)
     }
     
     func layout() {
@@ -79,14 +130,50 @@ private extension TicketsListViewController {
                 .inset(Constants.layoutOffset)
         }
         
+        collectionView.snp.makeConstraints {
+            $0.top.equalTo(navigationView.snp.bottom)
+            $0.leading.equalToSuperview()
+                .offset(Constants.layoutOffset)
+            $0.trailing.equalToSuperview()
+                .inset(Constants.layoutOffset)
+            $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
+        }
+        
     }
     
     func bind() {
+        
+        viewModel.state.sink { [unowned self] state in
+            switch state {
+            case .downloaded:
+                collectionView.reloadData()
+            case .networkError(let error):
+                showAlert(message: error)
+            }
+            collectionView.refreshControl?.endRefreshing()
+        }.store(in: &cancelable)
         
     }
     
     @objc func backButtonTapped() {
         viewModel.popView()
+    }
+    
+    @objc func refreshData() {
+        viewModel.fetchData()
+        collectionView.refreshControl?.beginRefreshing()
+    }
+    
+    func showAlert(message: String) {
+        let alert = UIAlertController(title: StringConstants.alertTitle,
+                                      message: message,
+                                      preferredStyle: .alert)
+        let action = UIAlertAction(title: StringConstants.alertActionTitle,
+                                   style: .destructive)
+        
+        alert.addAction(action)
+        
+        present(alert, animated: true)
     }
     
 }
@@ -97,6 +184,15 @@ private extension TicketsListViewController {
     
     enum Constants {
         static let layoutOffset = 16.0
+        static let itemSpacing = 16.0
+        static let estimatedItemWidth = 328.0
+        static let estimatedItemHeight = 119.0
+        static let contentInsetsTop = 26.0
+    }
+    
+    enum StringConstants {
+        static let alertTitle = "Ошибка"
+        static let alertActionTitle = "OK"
     }
     
     enum Colors {

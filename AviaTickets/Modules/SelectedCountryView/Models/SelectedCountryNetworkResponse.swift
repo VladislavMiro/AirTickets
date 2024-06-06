@@ -8,5 +8,5 @@
 import Foundation
 
 struct SelectedCountryNetworkResponse: Decodable {
-    let ticketsOffers: [Ticket]
+    let ticketsOffers: [TicketOffer]
 }

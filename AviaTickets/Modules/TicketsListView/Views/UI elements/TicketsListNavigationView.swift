@@ -28,7 +28,6 @@ final class TicketsListNavigationView: UIControl {
         label.textColor = Colors.title
         label.textAlignment = .left
         label.adjustsFontSizeToFitWidth = true
-        label.text = "dasdasdsadasdasdasdasdadsdasdas"
         
         return label
     }()
@@ -40,7 +39,6 @@ final class TicketsListNavigationView: UIControl {
         label.textColor = Colors.subTitle
         label.textAlignment = .left
         label.adjustsFontSizeToFitWidth = true
-        label.text = "dasdasdsadasdasdasdasdadsdasdas"
         
         return label
     }()

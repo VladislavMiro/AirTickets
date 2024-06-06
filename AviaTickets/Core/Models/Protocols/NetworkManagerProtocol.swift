@@ -8,10 +8,14 @@
 import Foundation
 import Combine
 
-protocol AirTicketsNetworkManagerProtocol {
+protocol AirTicketsNetworkManagerProtocol: AnyObject {
     func fetchMusicTravelOffers() -> Future<AirTicketsNetworkResponse, Error>
 }
 
-protocol SelectedCountryNetworkManagerProtocol {
+protocol SelectedCountryNetworkManagerProtocol: AnyObject {
     func fetchTicketOffers() -> Future<SelectedCountryNetworkResponse, Error>
+}
+
+protocol TicketsListNetworkManagerProtocol: AnyObject {
+    func fetchAllTickets() -> Future<TicketsListNetworkResponse, Error>
 }
