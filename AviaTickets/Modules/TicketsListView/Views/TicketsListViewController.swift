@@ -56,6 +56,12 @@ final class TicketsListViewController: UIViewController {
         return collectionView
     }()
     
+    private lazy var bottomButtons: TicketsListBottomButtonView = {
+        let view = TicketsListBottomButtonView()
+        
+        return view
+    }()
+    
     //MARK: - Imitialaizers
     
     public init(viewModel: TicketsListViewModelProtocol) {
@@ -117,6 +123,7 @@ private extension TicketsListViewController {
         
         view.addSubview(navigationView)
         view.addSubview(collectionView)
+        view.addSubview(bottomButtons)
     }
     
     func layout() {
@@ -137,6 +144,12 @@ private extension TicketsListViewController {
             $0.trailing.equalToSuperview()
                 .inset(Constants.layoutOffset)
             $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
+        }
+        
+        bottomButtons.snp.makeConstraints {
+            $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
+                .inset(Constants.layoutOffset)
+            $0.centerX.equalToSuperview()
         }
         
     }
