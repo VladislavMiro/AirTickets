@@ -58,12 +58,15 @@ extension SelectedCountryViewCoordinator: SelectedCountryViewCoordinatorPorotoco
         parentCoordinator?.finish(coordinator: self)
     }
     
-    public func showTicketsListView(departureData: String, arrivalData: String) {
+    public func showTicketsListView(departureData: String, arrivalData: String,
+                                    departureDay: Date,  numberOfPassangers: Int) {
         let coordinator = TicketsListViewCoordinator(
             navigationController: navigationContorller,
             parentCoordinator: self,
             departureData: departureData,
-            arrivalData: arrivalData)
+            arrivalData: arrivalData,
+            departureDay: departureDay,
+            numberOfPassangers: numberOfPassangers)
         
         coordinator.start()
         childCoordinators.append(coordinator)

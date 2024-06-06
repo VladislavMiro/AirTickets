@@ -12,14 +12,26 @@ final class TicketsListViewController: UIViewController {
 
     //MARK: - Private properties
     
+    private let viewModel: TicketsListViewModelProtocol
     private var cancelable: Set<AnyCancellable>
     
     //MARK: - UI elements
     
+    private lazy var navigationView: TicketsListNavigationView = {
+        let view = TicketsListNavigationView()
+        
+        view.addTarget(self,
+                       action: #selector(backButtonTapped),
+                       for: .touchUpInside)
+        
+        return view
+    }()
+    
     //MARK: - Imitialaizers
     
-    public init() {
-        self.cancelable = []
+    public init(viewModel: TicketsListViewModelProtocol) {
+        self.viewModel = viewModel
+        cancelable = []
         
         super.init(nibName: nil, bundle: nil)
     }
@@ -50,9 +62,22 @@ private extension TicketsListViewController {
     func configuration() {
         view.backgroundColor = Colors.background
         
+        navigationView.set(title: viewModel.title,
+                           subtitle: viewModel.subtitle)
+        
+        view.addSubview(navigationView)
     }
     
     func layout() {
+        
+        navigationView.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+                .offset(Constants.layoutOffset)
+            $0.leading.equalToSuperview()
+                .offset(Constants.layoutOffset)
+            $0.trailing.equalToSuperview()
+                .inset(Constants.layoutOffset)
+        }
         
     }
     
@@ -60,11 +85,19 @@ private extension TicketsListViewController {
         
     }
     
+    @objc func backButtonTapped() {
+        viewModel.popView()
+    }
+    
 }
 
 //MARK: - Extension with private subobjects
 
 private extension TicketsListViewController {
+    
+    enum Constants {
+        static let layoutOffset = 16.0
+    }
     
     enum Colors {
         static let background = R.color.backgroundBlackColor()

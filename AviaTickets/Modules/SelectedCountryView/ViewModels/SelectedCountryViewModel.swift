@@ -52,6 +52,7 @@ final class SelectedCountryViewModel {
     private var ticketsOffersData: [Ticket]
     private var departureDayData: Date
     private var returningDayData: Date?
+    private var numberOfPassangers: Int
 
     private let coordinator: SelectedCountryViewCoordinatorPorotocol
     private let networkManager: SelectedCountryNetworkManagerProtocol
@@ -79,6 +80,7 @@ final class SelectedCountryViewModel {
         ticketsOffersData = []
         ticketOffers = []
         cancelable = []
+        numberOfPassangers = 1
         
         itemData.departureDay = convertDate(date: departureDayData)
         itemData.ticketClassAndPassangerNumber = StringConstants.ticketClassAndPassangerNumber
@@ -103,7 +105,7 @@ extension SelectedCountryViewModel: SelectedCountryViewModelProtocol {
     }
     
     public func setDate(type:  SelectedCountryItemType, data: Date) {
-        if type == .departureDate && data <= Date.now {
+        if type == .departureDate && data >= Date.now {
             departureDayData = data
             itemData.departureDay = convertDate(date: data)
         }
@@ -124,7 +126,10 @@ extension SelectedCountryViewModel: SelectedCountryViewModelProtocol {
         let arrival = arrivalData.value
         let departure = departureData.value
         
-        coordinator.showTicketsListView(departureData: departure, arrivalData: arrival)
+        coordinator.showTicketsListView(departureData: departure,
+                                        arrivalData: arrival,
+                                        departureDay: departureDayData,
+                                        numberOfPassangers: numberOfPassangers)
     }
     
     public func fetchData() {

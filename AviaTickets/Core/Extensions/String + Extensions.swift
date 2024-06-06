@@ -17,4 +17,8 @@ extension String {
         return " "
     }
     
+    public static var dash: String {
+        return "-"
+    }
+    
 }

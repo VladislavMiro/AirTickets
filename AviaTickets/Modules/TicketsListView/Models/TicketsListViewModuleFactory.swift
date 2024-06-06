@@ -13,13 +13,19 @@ final class TicketsListViewModuleFactory {
     
     private let departureData: String
     private let arrivalData: String
+    private let departureDay: Date
+    private let numberOfPassangers: Int
     private let coordinator: TicketsListViewCoordinatorProtocol
     
     //MARK: - Initialaizers
     
-    public init(departureData: String, arrivalData: String, coordinator: TicketsListViewCoordinatorProtocol) {
+    public init(departureData: String, arrivalData: String,
+                departureDay: Date,  numberOfPassangers: Int,
+                coordinator: TicketsListViewCoordinatorProtocol) {
         self.departureData = departureData
         self.arrivalData = arrivalData
+        self.departureDay = departureDay
+        self.numberOfPassangers = numberOfPassangers
         self.coordinator = coordinator
     }
     
@@ -30,7 +36,12 @@ final class TicketsListViewModuleFactory {
 extension TicketsListViewModuleFactory {
     
     public func createModule() -> UIViewController {
-        let view = TicketsListViewController()
+        let viewModel = TicketsListViewModel(departue: departureData,
+                                             arrival: arrivalData,
+                                             departureDay: departureDay,
+                                             numberOfPassangers: numberOfPassangers,
+                                             coordinator: coordinator)
+        let view = TicketsListViewController(viewModel: viewModel)
         
         return view
     }

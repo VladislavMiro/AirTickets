@@ -19,16 +19,21 @@ final class TicketsListViewCoordinator {
     private weak var parentCoordinator: Coordinator?
     private let departureData: String
     private let arrivalData: String
+    private let departureDay: Date
+    private let numberOfPassangers: Int
     
     //MARK: - Initialaizers
     
     public init(navigationController: UINavigationController, 
                 parentCoordinator: Coordinator,
-                departureData: String, arrivalData:String) {
+                departureData: String, arrivalData:String,
+                departureDay: Date,  numberOfPassangers: Int) {
         self.navigationController = navigationController
         self.parentCoordinator = parentCoordinator
         self.departureData = departureData
         self.arrivalData = arrivalData
+        self.departureDay = departureDay
+        self.numberOfPassangers = numberOfPassangers
         
         childCoordinators = []
     }
@@ -42,6 +47,8 @@ extension TicketsListViewCoordinator: Coordinator {
     public func start() {
         let factory = TicketsListViewModuleFactory(departureData: departureData,
                                                    arrivalData: arrivalData,
+                                                   departureDay: departureDay,
+                                                   numberOfPassangers: numberOfPassangers,
                                                    coordinator: self)
         let view = factory.createModule()
         

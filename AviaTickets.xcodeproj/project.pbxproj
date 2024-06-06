@@ -11,6 +11,9 @@
 		D3331AC62C111F2E0011E283 /* TicketsListViewModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3331AC52C111F2E0011E283 /* TicketsListViewModuleFactory.swift */; };
 		D3331AC82C111FAF0011E283 /* TicketsListViewCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3331AC72C111FAF0011E283 /* TicketsListViewCoordinatorProtocol.swift */; };
 		D3331ACA2C111FF10011E283 /* TicketsListViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3331AC92C111FF10011E283 /* TicketsListViewCoordinator.swift */; };
+		D3331ACC2C1126480011E283 /* TicketsListViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3331ACB2C1126480011E283 /* TicketsListViewModelProtocol.swift */; };
+		D3331ACE2C1126F20011E283 /* TicketsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3331ACD2C1126F20011E283 /* TicketsListViewModel.swift */; };
+		D3331AD02C1128AF0011E283 /* TicketsListNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3331ACF2C1128AF0011E283 /* TicketsListNavigationView.swift */; };
 		D3699AB82C10A0F4007338DF /* SelectedCountryViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3699AB72C10A0F4007338DF /* SelectedCountryViewModelState.swift */; };
 		D3699ABA2C10A19C007338DF /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3699AB92C10A19C007338DF /* Ticket.swift */; };
 		D3699ABC2C10A23C007338DF /* SelectedCountryNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3699ABB2C10A23C007338DF /* SelectedCountryNetworkResponse.swift */; };
@@ -95,6 +98,9 @@
 		D3331AC52C111F2E0011E283 /* TicketsListViewModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsListViewModuleFactory.swift; sourceTree = "<group>"; };
 		D3331AC72C111FAF0011E283 /* TicketsListViewCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsListViewCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		D3331AC92C111FF10011E283 /* TicketsListViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsListViewCoordinator.swift; sourceTree = "<group>"; };
+		D3331ACB2C1126480011E283 /* TicketsListViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsListViewModelProtocol.swift; sourceTree = "<group>"; };
+		D3331ACD2C1126F20011E283 /* TicketsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsListViewModel.swift; sourceTree = "<group>"; };
+		D3331ACF2C1128AF0011E283 /* TicketsListNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketsListNavigationView.swift; sourceTree = "<group>"; };
 		D3699AB72C10A0F4007338DF /* SelectedCountryViewModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCountryViewModelState.swift; sourceTree = "<group>"; };
 		D3699AB92C10A19C007338DF /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		D3699ABB2C10A23C007338DF /* SelectedCountryNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCountryNetworkResponse.swift; sourceTree = "<group>"; };
@@ -226,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				D36C797F2C111C960050B542 /* Protocols */,
+				D3331ACD2C1126F20011E283 /* TicketsListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -233,6 +240,7 @@
 		D36C797F2C111C960050B542 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				D3331ACB2C1126480011E283 /* TicketsListViewModelProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -249,6 +257,7 @@
 		D36C79812C111CA00050B542 /* UI elements */ = {
 			isa = PBXGroup;
 			children = (
+				D3331ACF2C1128AF0011E283 /* TicketsListNavigationView.swift */,
 			);
 			path = "UI elements";
 			sourceTree = "<group>";
@@ -787,9 +796,11 @@
 				D3BF5F6B2C0F935E00E7263B /* SelectedCountryViewController.swift in Sources */,
 				D3BF5F752C104ED600E7263B /* SelectedCountrySubscribeView.swift in Sources */,
 				D3F6EA6D2C0B377D002883C5 /* AppDelegate.swift in Sources */,
+				D3331ACC2C1126480011E283 /* TicketsListViewModelProtocol.swift in Sources */,
 				D373D8A02C0B5C9500B498EB /* String + Extensions.swift in Sources */,
 				D3699AB82C10A0F4007338DF /* SelectedCountryViewModelState.swift in Sources */,
 				D3F6EA6F2C0B377D002883C5 /* SceneDelegate.swift in Sources */,
+				D3331AD02C1128AF0011E283 /* TicketsListNavigationView.swift in Sources */,
 				D373D89D2C0B599C00B498EB /* PlaceHolderViewController.swift in Sources */,
 				D36C79832C111CBD0050B542 /* TicketsListViewController.swift in Sources */,
 				D373D8C12C0CEAAE00B498EB /* AirTicketsSectionHeader.swift in Sources */,
@@ -838,6 +849,7 @@
 				D373D8F52C0E3DEB00B498EB /* SearchTicketsViewController.swift in Sources */,
 				D3BF5F672C0F919500E7263B /* SelectedCountryViewCoordinator.swift in Sources */,
 				D373D8D62C0D40C200B498EB /* AirTicketsMusicOffersOutput.swift in Sources */,
+				D3331ACE2C1126F20011E283 /* TicketsListViewModel.swift in Sources */,
 				D373D8F92C0E464200B498EB /* SearchTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
